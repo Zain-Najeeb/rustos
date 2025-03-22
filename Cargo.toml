@@ -1,0 +1,11 @@
+[package]
+name = "rustos"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+
+[profile.release]
+panic = "abort"
+[profile.dev]
+panic = "abort" 
