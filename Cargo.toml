@@ -1,11 +1,8 @@
 [package]
-name = "rustos"
+name = "aura_os"
 version = "0.1.0"
-edition = "2018"
+authors = ["Author Name <m.zainnajeeb@gmail.com>"]
+edition = "2021"
 
 [dependencies]
-
-[profile.release]
-panic = "abort"
-[profile.dev]
-panic = "abort" 
+bootloader = "0.9.8"
