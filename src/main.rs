@@ -15,7 +15,7 @@ pub trait Testable {
 #[panic_handler]
 fn panic(info: &PanicInfo) -> ! {
     println!("{info}");
-    loop {}
+    aura_os::hlt_loop()
 }
 
 #[cfg(test)]
@@ -33,7 +33,5 @@ pub extern "C" fn _start() -> ! {
     test_main();
 
     println!("it do be not crashing");
-
-    #[allow(clippy::empty_loop)]
-    loop {}
+    aura_os::hlt_loop()
 }
